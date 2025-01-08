@@ -114,7 +114,7 @@ checkPayloadConnection(){
         mavlink_message_t msg;
         uint8_t msg_cnt = getNewMewssage(msg);
 
-        if(msg_cnt && msg.sysid == PAYLOAD_SYSTEM_ID && msg.compid == PAYLOAD_COMPONENT_ID){
+        if(msg_cnt && msg.sysid == PAYLOAD_SYSTEM_ID && (msg.compid == PAYLOAD_COMPONENT_ID || msg.compid == GIMBAL_COMPONENT_ID)){
             SDK_LOG("Payload connected! ");
             break;
         }
