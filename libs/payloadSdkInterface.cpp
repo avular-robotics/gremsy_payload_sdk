@@ -2,8 +2,6 @@
 
 #define SDK_VERSION "2.1.0_build.27112024"
 
-Autopilot_Interface* payload_interface = nullptr;
-
 void*
 start_thrd_received_msg(void *args)
 {
